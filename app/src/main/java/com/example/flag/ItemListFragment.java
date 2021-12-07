@@ -2,6 +2,7 @@ package com.example.flag;
 
 import android.content.ClipData;
 import android.content.ClipDescription;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import com.example.flag.databinding.FragmentItemListBinding;
 import com.example.flag.databinding.ItemListContentBinding;
 
 import com.example.flag.placeholder.PlaceholderContent;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -169,6 +171,17 @@ public class ItemListFragment extends Fragment {
         };
 
         setupRecyclerView(recyclerView, onClickListener, onContextClickListener);
+        FloatingActionButton dbFAB = view.findViewById(R.id.DBfab);
+        dbFAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent("DBActivity");
+                Bundle extras=new Bundle();
+                i.putExtras(extras);
+                startActivityForResult(i,1);
+            }
+        });
+
     }
 
     private void setupRecyclerView(
