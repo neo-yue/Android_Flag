@@ -2,6 +2,12 @@
     <string name="app_name">Flag</string>
     <string name="title_item_detail">Item Detail</string>
     <string name="DBfab_Des">jumb to rate page</string>
+    <string name="comment_hint">write your new comment here</string>
+
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="text">text</string>
+    <string name="hint_comment">Please write a comment here</string>
     <string-array name="countries_name">
         <item>China</item>
         <item>America</item>
